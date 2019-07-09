@@ -64,6 +64,7 @@
           <element id="archive" name="domain-0.0.1-SNAPSHOT.jar">
             <element id="module-output" name="domain" />
           </element>
+          <element id="library" level="project" name="Maven: org.flywaydb:flyway-core:5.2.4" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.9.4" />

@@ -1,10 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/admin/admin-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #admin-otherStaticResources},
+                                                ~{:: #admin-navbar},
+                                                ~{:: #admin-sidebar},
+                                                ~{:: #admin-breadcrumb},
+                                                ~{:: #admin-content},
+                                                ~{:: #admin-footer},
+                                                ~{:: #admin-otherStaticJs}
+                                               )}">
 <head>
     <meta charset="UTF-8">
     <title>Admin page</title>
+
+    <th:block id="admin-otherStaticResources">
+
+    </th:block>
 </head>
 <body>
-Hello
+<div id="admin-navbar" th:replace="~{/fragments/admin/admin-fragments :: navbar-admin}">
+    Re-use admin fragments
+</div>
+
+<div id="admin-sidebar" th:replace="~{/fragments/admin/admin-fragments :: sidebar-admin}">
+    Re-use admin fragments
+</div>
+
+<div id="admin-breadcrumb" th:replace="~{/fragments/admin/admin-fragments :: breadcrumb-admin}">
+    Re-use admin fragments
+</div>
+
+<div id="admin-content">
+    Admin
+</div>
+
+<div id="admin-footer" th:replace="~{/fragments/admin/admin-fragments :: footer-admin}">
+    Footer
+</div>
+
+<th:block id="admin-otherStaticJs">
+
+</th:block>
 </body>
 </html>

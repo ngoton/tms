@@ -71,6 +71,7 @@
     <orderEntry type="module" module-name="api" />
     <orderEntry type="library" name="Maven: org.modelmapper:modelmapper:2.3.4" level="project" />
     <orderEntry type="module" module-name="domain" />
+    <orderEntry type="library" name="Maven: org.flywaydb:flyway-core:5.2.4" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-data-jpa:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework.boot:spring-boot-starter-aop:2.1.6.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.aspectj:aspectjweaver:1.9.4" level="project" />
