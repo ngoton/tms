@@ -168,7 +168,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`lease` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `lease_date` DATE NULL,
   `expired_date` DATE NULL,
-  `price` DECIMAL(10,2) NULL,
+  `price` DECIMAL(12,2) NULL,
   `vehicle_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_lease_vehicle1`
@@ -333,8 +333,8 @@ CREATE TABLE IF NOT EXISTS `tms`.`route` (
   `time` FLOAT NULL,
   `way` TINYINT(1) NULL,
   `oil` FLOAT NULL,
-  `trans_fee` DECIMAL(10,2) NULL,
-  `salary` DECIMAL(10,2) NULL,
+  `trans_fee` DECIMAL(12,2) NULL,
+  `salary` DECIMAL(12,2) NULL,
   `start_date` DATE NOT NULL,
   `end_date` DATE NULL,
   PRIMARY KEY (`start`, `finish`, `start_date`),
@@ -382,7 +382,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`price` (
   `start_date` DATE NOT NULL,
   `end_date` DATE NULL,
   `unit` TINYINT(1) NULL,
-  `price` DECIMAL(10,2) NULL,
+  `price` DECIMAL(12,2) NULL,
   PRIMARY KEY (`customer_id`, `commodity_id`, `start_date`),
   CONSTRAINT `fk_customer_has_commodity1_customer1`
     FOREIGN KEY (`customer_id`)
@@ -402,7 +402,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`price` (
 DROP TABLE IF EXISTS `tms`.`booking` ;
 
 CREATE TABLE IF NOT EXISTS `tms`.`booking` (
-  `id` INT NOT NULL AUTO_INCREMENT,
+  `id` VARCHAR(45) NOT NULL,
   `booking_number` VARCHAR(45) NOT NULL,
   `booking_date` DATE NULL,
   `booking_type` TINYINT(1) NULL,
@@ -438,10 +438,10 @@ CREATE TABLE IF NOT EXISTS `tms`.`invoice` (
   `id_number` VARCHAR(20) NULL,
   `address` VARCHAR(200) NULL,
   `payment` VARCHAR(45) NULL,
-  `subtotal` DECIMAL(12,2) NULL,
-  `tax` DECIMAL(12,2) NULL,
+  `subtotal` DECIMAL(14,2) NULL,
+  `tax` DECIMAL(14,2) NULL,
   `tax_rate` FLOAT NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   PRIMARY KEY (`id`));
 
 
@@ -456,7 +456,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`shipping_list` (
   `shipping_list_number` VARCHAR(45) NULL,
   `start_date` DATE NULL,
   `end_date` DATE NULL,
-  `amount` DECIMAL(12,2) NULL,
+  `amount` DECIMAL(14,2) NULL,
   `invoice_id` INT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_shipping_list_invoice1`
@@ -504,7 +504,7 @@ DROP TABLE IF EXISTS `tms`.`operation` ;
 CREATE TABLE IF NOT EXISTS `tms`.`operation` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `vehicle_id` INT NOT NULL,
-  `booking_id` INT NULL,
+  `booking_id` VARCHAR(45) NULL,
   `operation_code` VARCHAR(45) NULL,
   `operation_date` DATE NULL,
   `quantity` FLOAT NULL,
@@ -586,7 +586,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`cost_list` (
   `cost_list_number` VARCHAR(45) NULL,
   `start_date` DATE NULL,
   `end_date` DATE NULL,
-  `amount` DECIMAL(12,2) NULL,
+  `amount` DECIMAL(14,2) NULL,
   PRIMARY KEY (`id`));
 
 
@@ -600,10 +600,10 @@ CREATE TABLE IF NOT EXISTS `tms`.`cost` (
   `description` VARCHAR(255) NULL,
   `document_number` VARCHAR(45) NULL,
   `document_date` DATE NULL,
-  `amount` DECIMAL(10,2) NOT NULL,
-  `tax` DECIMAL(10,2) NULL,
+  `amount` DECIMAL(12,2) NOT NULL,
+  `tax` DECIMAL(12,2) NULL,
   `tax_rate` FLOAT NULL,
-  `total` DECIMAL(10,2) NULL,
+  `total` DECIMAL(12,2) NULL,
   `customer_id` INT NULL,
   `driver_payed` TINYINT(1) NULL,
   `cost_type` TINYINT(1) NOT NULL,
@@ -656,9 +656,9 @@ CREATE TABLE IF NOT EXISTS `tms`.`invoice_detail` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `description` VARCHAR(100) NULL,
   `quantity` FLOAT NULL,
-  `price` DECIMAL(12,2) NULL,
+  `price` DECIMAL(14,2) NULL,
   `unit` VARCHAR(20) NULL,
-  `amount` DECIMAL(12,2) NULL,
+  `amount` DECIMAL(14,2) NULL,
   `invoice_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_invoice_detail_invoice1`
@@ -679,7 +679,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`bank` (
   `bank_account` VARCHAR(45) NULL,
   `bank_name` VARCHAR(100) NULL,
   `bank_branch` VARCHAR(100) NULL,
-  `opening_balance` DECIMAL(12,2) NULL,
+  `opening_balance` DECIMAL(14,2) NULL,
   PRIMARY KEY (`id`));
 
 
@@ -694,10 +694,10 @@ CREATE TABLE IF NOT EXISTS `tms`.`fee` (
   `description` VARCHAR(255) NULL,
   `document_number` VARCHAR(45) NULL,
   `document_date` DATE NULL,
-  `amount` DECIMAL(10,2) NULL,
-  `tax` DECIMAL(10,2) NULL,
+  `amount` DECIMAL(12,2) NULL,
+  `tax` DECIMAL(12,2) NULL,
   `tax_rate` FLOAT NULL,
-  `total` DECIMAL(10,2) NULL,
+  `total` DECIMAL(12,2) NULL,
   `actived` DATE NULL,
   `expired` DATE NULL,
   `divided` INT NULL,
@@ -722,12 +722,12 @@ CREATE TABLE IF NOT EXISTS `tms`.`order` (
   `description` VARCHAR(255) NULL,
   `document_number` VARCHAR(45) NULL,
   `document_date` DATE NULL,
-  `amount` DECIMAL(10,2) NULL,
-  `tax` DECIMAL(10,2) NULL,
+  `amount` DECIMAL(12,2) NULL,
+  `tax` DECIMAL(12,2) NULL,
   `tax_rate` FLOAT NULL,
   `exchange_rate` FLOAT NULL,
   `currency` VARCHAR(20) NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   `customer_id` INT NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_order_customer1`
@@ -745,7 +745,7 @@ DROP TABLE IF EXISTS `tms`.`debit` ;
 CREATE TABLE IF NOT EXISTS `tms`.`debit` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `debit_date` DATE NOT NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   `description` VARCHAR(255) NULL,
   `debit_type` TINYINT(1) NULL,
   `invoice_id` INT NULL,
@@ -791,9 +791,9 @@ CREATE TABLE IF NOT EXISTS `tms`.`transfer` (
   `transfer_date` DATE NOT NULL,
   `transfer_number` VARCHAR(45) NULL,
   `description` VARCHAR(255) NULL,
-  `amount` DECIMAL(12,2) NULL,
+  `amount` DECIMAL(14,2) NULL,
   `exchange_rate` FLOAT NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   `currency` VARCHAR(20) NULL,
   `transfer_type` TINYINT(1) NULL,
   `bank_id` INT NOT NULL,
@@ -813,9 +813,9 @@ DROP TABLE IF EXISTS `tms`.`balance` ;
 CREATE TABLE IF NOT EXISTS `tms`.`balance` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `balance_date` DATE NULL,
-  `amount` DECIMAL(12,2) NULL,
+  `amount` DECIMAL(14,2) NULL,
   `exchange_rate` FLOAT NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   `currency` VARCHAR(20) NULL,
   `description` VARCHAR(255) NULL,
   `debit_id` INT NULL,
@@ -854,7 +854,7 @@ DROP TABLE IF EXISTS `tms`.`ledger` ;
 CREATE TABLE IF NOT EXISTS `tms`.`ledger` (
   `id` BIGINT NOT NULL AUTO_INCREMENT,
   `ledger_date` DATE NOT NULL,
-  `money` DECIMAL(12,2) NULL,
+  `money` DECIMAL(14,2) NULL,
   `description` VARCHAR(255) NULL,
   `document_number` VARCHAR(45) NULL,
   `document_date` DATE NULL,
@@ -884,7 +884,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`receipt` (
   `receipt_number` VARCHAR(45) NULL,
   `description` VARCHAR(255) NULL,
   `quantity` FLOAT NULL,
-  `total` DECIMAL(10,2) NULL,
+  `total` DECIMAL(12,2) NULL,
   `order_id` INT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_receipt_order1`
@@ -905,7 +905,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`issue` (
   `issue_number` VARCHAR(45) NULL,
   `description` VARCHAR(255) NULL,
   `quantity` FLOAT NULL,
-  `total` DECIMAL(10,2) NULL,
+  `total` DECIMAL(12,2) NULL,
   `invoice_id` INT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_issue_invoice1`
@@ -1081,7 +1081,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`issue_has_item` (
   `issue_id` INT NOT NULL,
   `item_id` INT NOT NULL,
   `quantity` FLOAT NULL,
-  `price` DECIMAL(10,2) NULL,
+  `price` DECIMAL(12,2) NULL,
   `unit` VARCHAR(20) NULL,
   PRIMARY KEY (`issue_id`, `item_id`),
   CONSTRAINT `fk_issue_has_item_issue1`
@@ -1105,7 +1105,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`receipt_has_item` (
   `receipt_id` INT NOT NULL,
   `item_id` INT NOT NULL,
   `quantity` FLOAT NULL,
-  `price` DECIMAL(10,2) NULL,
+  `price` DECIMAL(12,2) NULL,
   `unit` VARCHAR(20) NULL,
   PRIMARY KEY (`receipt_id`, `item_id`),
   CONSTRAINT `fk_receipt_has_item_receipt1`
