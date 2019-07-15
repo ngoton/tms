@@ -37,7 +37,7 @@ public class Balance extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "amount", precision = 12, scale = 2)
+    @Column(name = "amount", precision = 14, scale = 2)
     public Double getAmount() {
         return amount;
     }
@@ -57,7 +57,7 @@ public class Balance extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "total", precision = 12, scale = 2)
+    @Column(name = "total", precision = 14, scale = 2)
     public Double getTotal() {
         return total;
     }

@@ -884,7 +884,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`receipt` (
   `receipt_number` VARCHAR(45) NULL,
   `description` VARCHAR(255) NULL,
   `quantity` FLOAT NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   `order_id` INT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_receipt_order1`
@@ -905,7 +905,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`issue` (
   `issue_number` VARCHAR(45) NULL,
   `description` VARCHAR(255) NULL,
   `quantity` FLOAT NULL,
-  `total` DECIMAL(12,2) NULL,
+  `total` DECIMAL(14,2) NULL,
   `invoice_id` INT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_issue_invoice1`
@@ -1081,7 +1081,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`issue_has_item` (
   `issue_id` INT NOT NULL,
   `item_id` INT NOT NULL,
   `quantity` FLOAT NULL,
-  `price` DECIMAL(12,2) NULL,
+  `price` DECIMAL(14,2) NULL,
   `unit` VARCHAR(20) NULL,
   PRIMARY KEY (`issue_id`, `item_id`),
   CONSTRAINT `fk_issue_has_item_issue1`
@@ -1105,7 +1105,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`receipt_has_item` (
   `receipt_id` INT NOT NULL,
   `item_id` INT NOT NULL,
   `quantity` FLOAT NULL,
-  `price` DECIMAL(12,2) NULL,
+  `price` DECIMAL(14,2) NULL,
   `unit` VARCHAR(20) NULL,
   PRIMARY KEY (`receipt_id`, `item_id`),
   CONSTRAINT `fk_receipt_has_item_receipt1`

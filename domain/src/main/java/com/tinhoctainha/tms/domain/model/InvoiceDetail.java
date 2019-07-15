@@ -36,7 +36,7 @@ public class InvoiceDetail extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "price", precision = 12, scale = 2)
+    @Column(name = "price", precision = 14, scale = 2)
     public Double getPrice() {
         return price;
     }
@@ -56,7 +56,7 @@ public class InvoiceDetail extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "amount", precision = 12, scale = 2)
+    @Column(name = "amount", precision = 14, scale = 2)
     public Double getAmount() {
         return amount;
     }

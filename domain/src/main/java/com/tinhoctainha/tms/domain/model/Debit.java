@@ -45,7 +45,7 @@ public class Debit extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "total", precision = 12, scale = 2)
+    @Column(name = "total", precision = 14, scale = 2)
     public Long getTotal() {
         return total;
     }

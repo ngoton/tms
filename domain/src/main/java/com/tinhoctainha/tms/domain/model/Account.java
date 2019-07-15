@@ -3,6 +3,8 @@ package com.tinhoctainha.tms.domain.model;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -10,6 +12,12 @@ public class Account extends IncrementIDBaseEntity {
     private String name;
     private String description;
     private Integer parent;
+
+    @OneToMany(mappedBy = "debit")
+    private List<Ledger> debitLedgers;
+
+    @OneToMany(mappedBy = "credit")
+    private List<Ledger> creditLedgers;
 
     @Basic
     @Column(name = "name")

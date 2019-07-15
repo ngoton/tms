@@ -128,7 +128,7 @@ public class Invoice extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "subtotal", precision = 12, scale = 2)
+    @Column(name = "subtotal", precision = 14, scale = 2)
     public Double getSubtotal() {
         return subtotal;
     }
@@ -138,7 +138,7 @@ public class Invoice extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "tax", precision = 12, scale = 2)
+    @Column(name = "tax", precision = 14, scale = 2)
     public Double getTax() {
         return tax;
     }
@@ -158,7 +158,7 @@ public class Invoice extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "total", precision = 12, scale = 2)
+    @Column(name = "total", precision = 14, scale = 2)
     public Double getTotal() {
         return total;
     }

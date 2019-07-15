@@ -3,6 +3,8 @@ package com.tinhoctainha.tms.domain.model;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToMany;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,6 +13,9 @@ public class Accessory extends IncrementIDBaseEntity {
     private String name;
     private String brand;
     private String manufacture;
+
+    @OneToMany(mappedBy = "accessory")
+    private List<Item> items;
 
     @Basic
     @Column(name = "accessory_code")
@@ -52,6 +57,14 @@ public class Accessory extends IncrementIDBaseEntity {
         this.manufacture = manufacture;
     }
 
+    public List<Item> getItems() {
+        return items;
+    }
+
+    public void setItems(List<Item> items) {
+        this.items = items;
+    }
+
     @Override
     public boolean equals(Object o){
         if (this == o) return true;
@@ -68,4 +81,5 @@ public class Accessory extends IncrementIDBaseEntity {
     public int hashCode(){
         return Objects.hash(getId(), accessoryCode, name, brand, manufacture);
     }
+
 }

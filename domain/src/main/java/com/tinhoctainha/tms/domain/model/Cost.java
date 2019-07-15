@@ -69,7 +69,7 @@ public class Cost extends IncrementIDBaseEntity {
 
     @Basic
     @NotNull
-    @Column(name = "amount", precision = 10, scale = 2)
+    @Column(name = "amount", precision = 12, scale = 2)
     public Double getAmount() {
         return amount;
     }
@@ -79,7 +79,7 @@ public class Cost extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "tax", precision = 10, scale = 2)
+    @Column(name = "tax", precision = 12, scale = 2)
     public Double getTax() {
         return tax;
     }
@@ -99,7 +99,7 @@ public class Cost extends IncrementIDBaseEntity {
     }
 
     @Basic
-    @Column(name = "total", precision = 10, scale = 2)
+    @Column(name = "total", precision = 12, scale = 2)
     public Double getTotal() {
         return total;
     }
