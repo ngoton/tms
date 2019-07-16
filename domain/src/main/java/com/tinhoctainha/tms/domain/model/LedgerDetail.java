@@ -1,14 +1,13 @@
 package com.tinhoctainha.tms.domain.model;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@Table(name = "ledger_detail")
 public class LedgerDetail implements Serializable {
+    @Id
     @OneToOne
     @JoinColumn(name = "ledger_id", referencedColumnName = "id", nullable = false)
     private Ledger ledger;

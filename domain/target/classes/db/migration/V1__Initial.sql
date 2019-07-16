@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`user` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NOT NULL,
   `password` VARCHAR(255) NOT NULL,
-  `active` TINYINT(1) NULL,
+  `enabled` TINYINT NULL,
   `staff_id` INT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_user_staff1`
@@ -140,7 +140,7 @@ CREATE TABLE IF NOT EXISTS `tms`.`vehicle` (
   `vehicle_symbol` VARCHAR(10) NULL,
   `brand` VARCHAR(45) NULL,
   `model_code` VARCHAR(45) NULL,
-  `year_manufacture` YEAR NULL,
+  `year_manufacture` DATE NULL,
   `type` TINYINT(1) NULL,
   `owner` VARCHAR(45) NULL,
   PRIMARY KEY (`id`));
@@ -454,8 +454,8 @@ CREATE TABLE IF NOT EXISTS `tms`.`shipping_list` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `shipping_list_date` DATE NULL,
   `shipping_list_number` VARCHAR(45) NULL,
-  `start_date` DATE NULL,
-  `end_date` DATE NULL,
+  `start_date` DATETIME NULL,
+  `end_date` DATETIME NULL,
   `amount` DECIMAL(14,2) NULL,
   `invoice_id` INT NULL,
   PRIMARY KEY (`id`),

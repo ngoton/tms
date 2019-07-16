@@ -11,10 +11,10 @@ import java.util.Set;
 public class Permission extends IncrementIDBaseEntity {
     private String name;
 
-    @ManyToMany(mappedBy = "permission")
+    @ManyToMany(mappedBy = "permissions")
     private Set<User> users;
 
-    @ManyToMany(mappedBy = "permission")
+    @ManyToMany(mappedBy = "permissions")
     private Set<Role> roles;
 
     @Basic

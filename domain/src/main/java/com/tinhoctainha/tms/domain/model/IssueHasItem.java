@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
+@Table(name = "issue_has_item")
 @IdClass(IssueHasItemId.class)
 public class IssueHasItem implements Serializable {
     private Float quantity;

@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
+@Table(name = "invoice_detail")
 public class InvoiceDetail extends IncrementIDBaseEntity {
     private String description;
     private Float quantity;
