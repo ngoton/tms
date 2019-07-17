@@ -4,6 +4,7 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToMany;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
@@ -11,10 +12,10 @@ public class Province extends IncrementIDBaseEntity {
     private String name;
 
     @OneToMany(mappedBy = "province")
-    private Customer customer;
+    private List<Customer> customers;
 
-    @OneToMany(mappedBy = "place")
-    private Place place;
+    @OneToMany(mappedBy = "province")
+    private List<Place> places;
 
     @Basic
     @Column(name = "name")
@@ -26,20 +27,20 @@ public class Province extends IncrementIDBaseEntity {
         this.name = name;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public List<Customer> getCustomers() {
+        return customers;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomers(List<Customer> customers) {
+        this.customers = customers;
     }
 
-    public Place getPlace() {
-        return place;
+    public List<Place> getPlaces() {
+        return places;
     }
 
-    public void setPlace(Place place) {
-        this.place = place;
+    public void setPlaces(List<Place> places) {
+        this.places = places;
     }
 
     @Override

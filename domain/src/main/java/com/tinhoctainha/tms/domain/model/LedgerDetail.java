@@ -6,8 +6,8 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "ledger_detail")
-public class LedgerDetail implements Serializable {
-    @Id
+public class LedgerDetail extends IncrementIDBaseEntity {
+    @MapsId
     @OneToOne
     @JoinColumn(name = "ledger_id", referencedColumnName = "id", nullable = false)
     private Ledger ledger;

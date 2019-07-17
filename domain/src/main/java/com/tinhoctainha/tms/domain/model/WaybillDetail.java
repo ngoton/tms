@@ -5,8 +5,8 @@ import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class WaybillDetail implements Serializable {
-    @Id
+public class WaybillDetail extends IncrementIDBaseEntity {
+    @MapsId
     @OneToOne
     @JoinColumn(name = "waybill_id", referencedColumnName = "id", nullable = false)
     private Waybill waybill;
