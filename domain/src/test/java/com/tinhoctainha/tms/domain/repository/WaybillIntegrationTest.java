@@ -118,7 +118,7 @@ public class WaybillIntegrationTest {
         List<Customer> customers = customerRepository.findAll();
         assertThat(customers.size()).isEqualTo(1);
         customer = customers.get(0);
-//        List<Contact> contacts = contactRepository.findContactByCustomerId(customer.getId());
+        List<Contact> contacts = contactRepository.findContactByCustomerId(customer.getId());
 //        assertThat(contacts.size()).isEqualTo(1);
 //        assertThat(contacts.get(0).getPhone()).isEqualTo("0902 085 911");
     }

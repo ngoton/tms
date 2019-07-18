@@ -2,106 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e824715c-38c6-4b82-af85-3cca4dd1aba4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/DomainTestConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/config/MvcConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccessoryDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccountDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ActionDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/BalanceDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Bank.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Booking.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Commodity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Contact.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Cost.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/CostList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Debit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Fee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/IncrementIDBaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Invoice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/InvoiceDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Issue.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/IssueHasItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/IssueHasItemId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Item.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Lease.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Ledger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/LedgerDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Oil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Operation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Permission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Place.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Price.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/PriceId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Province.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Receipt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ReceiptHasItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ReceiptHasItemId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Road.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/RoadId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Role.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Romooc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/RomoocInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/RomoocRemoval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Route.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/RouteId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ShippingList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Staff.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/StaffHasVehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/StaffHasVehicleId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Transfer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/UIDBaseEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Vehicle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/VehicleHasRomooc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/VehicleHasRomoocId.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/VehicleInsert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/VehicleRemoval.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Waybill.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/WaybillDetail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/exception/BusinessLogicException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/util/CustomDateDeserializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/util/CustomDateSerializer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/LedgerDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/LedgerDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Province.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Province.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/WaybillDetail.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/WaybillDetail.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/AccessoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/AccessoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/AccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/AccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ActionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ActionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BalanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BalanceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BankRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BankRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BookingRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BookingRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CommodityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CommodityRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ContactRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ContactRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CustomerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/DebitRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/DebitRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/FeeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/FeeRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueHasItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueHasItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LeaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LeaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LedgerDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LedgerDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LedgerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LedgerRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OilRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OilRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OperationRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OperationRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OrderRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OrderRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PermissionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PermissionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PlaceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PlaceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PriceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PriceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ProvinceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ProvinceRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ReceiptHasItemRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ReceiptHasItemRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ReceiptRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ReceiptRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RoadRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RoadRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RoleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RomoocInsertRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RomoocInsertRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RomoocRemovalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RomoocRemovalRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RomoocRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RomoocRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RouteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RouteRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ShippingListRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ShippingListRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/StaffHasVehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/StaffHasVehicleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/StaffRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/StaffRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/TransferRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/TransferRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleHasRomoocRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleHasRomoocRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleInsertRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleInsertRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleRemovalRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleRemovalRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/VehicleRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/WaybillDetailRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/WaybillDetailRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/WaybillRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/WaybillRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/AccessoryRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/AccessoryRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/AccountRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/AccountRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ActionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ActionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/BalanceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/BalanceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/BankRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/BankRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/BookingRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/BookingRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CommodityRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CommodityRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ContactRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ContactRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CostListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CostListRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CostRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CostRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CustomerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/CustomerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/DebitRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/DebitRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/FeeRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/FeeRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/InvoiceDetailRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/InvoiceDetailRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/InvoiceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/InvoiceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/IssueHasItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/IssueHasItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/IssueRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/IssueRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/LeaseRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/LeaseRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/LedgerDetailRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/LedgerDetailRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/LedgerRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/LedgerRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/OilRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/OilRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/OperationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/OperationRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/OrderRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/OrderRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/PermissionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/PermissionRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/PlaceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/PlaceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/PriceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/PriceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ProvinceRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ProvinceRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ReceiptHasItemRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ReceiptHasItemRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ReceiptRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ReceiptRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RoadRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RoadRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RoleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RoleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RomoocInsertRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RomoocInsertRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RomoocRemovalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RomoocRemovalRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RomoocRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RomoocRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RouteRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/RouteRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ShippingListRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/ShippingListRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/StaffHasVehicleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/StaffHasVehicleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/StaffRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/StaffRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/TransferRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/TransferRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/UserRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleHasRomoocRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleHasRomoocRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleInsertRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleInsertRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleRemovalRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleRemovalRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/VehicleRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/WaybillDetailRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/WaybillDetailRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/WaybillRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/classes/com/tinhoctainha/tms/domain/repository/WaybillRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/target/test-classes/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/domain/target/test-classes/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/security/security.iml" beforeDir="false" afterPath="$PROJECT_DIR$/security/security.iml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -137,33 +103,80 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/WaybillDetail.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/VehicleHasRomoocId.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Receipt.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Lease.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Price.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/LedgerDetail.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Operation.java">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ActionDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+            <state relative-caret-position="102">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#590#591#0" expanded="true" />
+                <element signature="e#615#616#0" expanded="true" />
+                <element signature="e#649#650#0" expanded="true" />
+                <element signature="e#677#678#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/BalanceDto.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+              <folding>
+                <element signature="e#803#804#0" expanded="true" />
+                <element signature="e#828#829#0" expanded="true" />
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#890#891#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Customer.java">
+        <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccountDto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Contact.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            <state relative-caret-position="-35">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -252,17 +265,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/BookingRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CommodityRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ContactRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostListRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CustomerRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/DebitRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/FeeRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceDetailRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceRepository.java" />
-        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueHasItemRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ItemRepository.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LeaseRepository.java" />
@@ -303,6 +305,17 @@
         <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/WaybillDetail.java" />
         <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/LedgerDetail.java" />
         <option value="$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ContactRepository.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/config/MvcConfig.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/exception/BusinessLogicException.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/util/CustomDateSerializer.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/util/CustomDateDeserializer.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Operation.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccessoryDto.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Account.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccountDto.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ActionDto.java" />
+        <option value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/BalanceDto.java" />
       </list>
     </option>
   </component>
@@ -333,7 +346,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,95 +356,64 @@
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tms" type="b2602c69:ProjectViewProjectNode" />
               <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tms" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tms" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -444,35 +425,35 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/backoffice/src/main/resources/static/fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.tinhoctainha.tms.domain" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\webproject\java\tms\api\src\main\java\com\tinhoctainha\tms\api\dto" />
+      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\fonts" />
+      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\images\avatars" />
+      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\js" />
+      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\css" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.tinhoctainha.tms.domain.repository" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\webproject\java\tms\backoffice\src\main\resources\templates\layouts" />
       <recent name="D:\webproject\java\tms\backoffice\src\main\resources\templates" />
       <recent name="D:\webproject\java\tms\backoffice\src\main\resources\templates\fragments" />
       <recent name="D:\webproject\java\tms\domain\src\main\resources\db" />
       <recent name="D:\webproject\java\tms\backoffice\src\main\resources\templates\admin" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="com.tinhoctainha.tms.domain" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.tinhoctainha.tms.domain.repository" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\fonts" />
-      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\images\avatars" />
-      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\js" />
-      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\css" />
-      <recent name="D:\webproject\java\tms\backoffice\src\main\resources\static\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -549,20 +530,12 @@
       <workItem from="1562980026886" duration="7049000" />
       <workItem from="1563155787656" duration="18778000" />
       <workItem from="1563244335047" duration="20593000" />
-      <workItem from="1563331909934" duration="13687000" />
+      <workItem from="1563331909934" duration="13983000" />
+      <workItem from="1563430821137" duration="6769000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 13h 41m 55s.xml">
-      <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 13h 46m 28s.xml">
-      <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 13h 49m 36s.xml">
-      <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 13h 53m 02s.xml">
       <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
     </history-entry>
@@ -584,15 +557,24 @@
     <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 15h 23m 00s.xml">
       <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 15h 45m 28s.xml">
+      <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.17 at 15h 46m 21s.xml">
+      <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="WaybillIntegrationTest_test_customer - 2019.07.18 at 13h 25m 08s.xml">
+      <configuration name="WaybillIntegrationTest.test_customer" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172582000" />
+    <option name="totallyTimeSpent" value="179647000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23136246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23457584" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -603,7 +585,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.3293011" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.39919356" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -627,21 +609,47 @@
       <window_info anchor="right" id="Database" order="8" weight="0.32969153" />
       <window_info anchor="right" id="Bean Validation" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23457584" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293011" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49871466" weight="0.3293011" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39919356" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3293011" />
+      <window_info anchor="bottom" id="Spring" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="10" />
+      <window_info anchor="bottom" id="Terminal" order="11" weight="0.3293011" />
+      <window_info anchor="bottom" id="Event Log" order="12" sideWeight="0.5012854" side_tool="true" weight="0.3293011" />
+      <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.3293011" />
+      <window_info anchor="bottom" id="Messages" order="14" sideWeight="0.4993573" weight="0.3293011" />
+      <window_info anchor="bottom" id="Problems" order="15" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Theme Preview" order="4" />
+      <window_info anchor="right" id="Maven" order="5" weight="0.32969153" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.32969153" />
+      <window_info anchor="right" id="Bean Validation" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java</url>
-          <line>121</line>
-          <properties />
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="customer.getContacts().size()" language="JAVA" />
@@ -688,160 +696,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CostListRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/CustomerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/DebitRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/FeeRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceDetailRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/InvoiceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueHasItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/IssueRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LeaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LedgerDetailRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/LedgerRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OilRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OperationRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/OrderRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PermissionRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PlaceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/PriceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ProvinceRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ReceiptHasItemRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="7" column="11" selection-start-line="7" selection-start-column="11" selection-end-line="7" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ReceiptRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/RoadRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -957,20 +811,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/resources/application-test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/application-test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/resources/application-test.properties" />
+    <entry file="file://$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/application-test.properties" />
     <entry file="file://$PROJECT_DIR$/backoffice/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -978,13 +820,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/resources/application-test.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="27" selection-start-column="27" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/resources/application-test.properties" />
     <entry file="file://$PROJECT_DIR$/backoffice/src/main/java/com/tinhoctainha/tms/backoffice/TmsApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -1040,6 +876,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="115" column="16" selection-start-line="115" selection-start-column="16" selection-end-line="115" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Throwable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3417">
+          <caret line="263" column="11" selection-start-line="263" selection-start-column="11" selection-end-line="263" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Exception.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
+          <folding>
+            <element signature="e#1663#1664#0" expanded="true" />
+            <element signature="e#1693#1694#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/exception/BusinessLogicException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="8" lean-forward="true" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding>
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#174#175#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-databind/2.9.9/jackson-databind-2.9.9.jar!/com/fasterxml/jackson/databind/JsonDeserializer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-399">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/util/CustomDateSerializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/util/CustomDateDeserializer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="45" selection-start-line="2" selection-start-column="45" selection-end-line="2" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/repository/ContactRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Customer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Contact.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -1047,19 +960,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Customer.java">
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/IncrementIDBaseEntity.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Debit.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/WaybillDetail.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/VehicleHasRomoocId.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Receipt.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Lease.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Price.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/LedgerDetail.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/domain/src/main/java/com/tinhoctainha/tms/domain/model/Accessory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        <state relative-caret-position="-307">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/domain/src/test/java/com/tinhoctainha/tms/domain/repository/WaybillIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/config/MvcConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="116" column="40" selection-start-line="116" selection-start-column="40" selection-end-line="116" selection-end-column="40" />
+        <state relative-caret-position="221">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#278#279#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccessoryDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1152#1153#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1211#1212#0" expanded="true" />
+            <element signature="e#1239#1240#0" expanded="true" />
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1175#1176#0" expanded="true" />
+            <element signature="e#1297#1298#0" expanded="true" />
+            <element signature="e#1347#1348#0" expanded="true" />
+            <element signature="e#1318#1319#0" expanded="true" />
+            <element signature="e#1344#1345#0" expanded="true" />
+            <element signature="e#1245#1246#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1471#1472#0" expanded="true" />
+            <element signature="e#1319#1320#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1589#1590#0" expanded="true" />
+            <element signature="e#1622#1623#0" expanded="true" />
+            <element signature="e#1407#1408#0" expanded="true" />
+            <element signature="e#1453#1454#0" expanded="true" />
+            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1520#1521#0" expanded="true" />
+            <element signature="e#1569#1570#0" expanded="true" />
+            <element signature="e#1603#1604#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/Operation.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/AccountDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-35">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/ActionDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+          <folding>
+            <element signature="e#590#591#0" expanded="true" />
+            <element signature="e#615#616#0" expanded="true" />
+            <element signature="e#649#650#0" expanded="true" />
+            <element signature="e#677#678#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/src/main/java/com/tinhoctainha/tms/api/dto/BalanceDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
+          <folding>
+            <element signature="e#803#804#0" expanded="true" />
+            <element signature="e#828#829#0" expanded="true" />
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#890#891#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1070,10 +1082,12 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
+          <last-edited>backoffice:war</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>
@@ -1081,6 +1095,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1114,11 +1129,12 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring|security</last-edited>
+          <last-edited>domain</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1126,6 +1142,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
