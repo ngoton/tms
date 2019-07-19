@@ -1,13 +1,17 @@
-package com.tinhoctainha.tms.domain.model;
+package com.tinhoctainha.tms.api.dto;
 
-import javax.persistence.*;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.tinhoctainha.tms.api.util.CustomDateDeserializer;
+import com.tinhoctainha.tms.api.util.CustomDateSerializer;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 
-@Entity
-public class Fee extends IncrementIDBaseEntity {
+public class FeeDto implements Serializable {
+    private Long id;
     private Date feeDate;
     private String description;
     private String documentNumber;
@@ -19,36 +23,30 @@ public class Fee extends IncrementIDBaseEntity {
     private Date actived;
     private Date expired;
     private Integer divided;
+    private CustomerDto customer;
+    private List<VehicleDto> vehicles;
+    private List<RomoocDto> romoocs;
+    private List<LedgerDetailDto> ledgerDetails;
+    private DebitDto debit;
 
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id", nullable = false)
-    private Customer customer;
+    public Long getId() {
+        return id;
+    }
 
-    @ManyToMany(mappedBy = "fees")
-    private Set<Vehicle> vehicles;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @ManyToMany(mappedBy = "fees")
-    private Set<Romooc> romoocs;
-
-    @OneToMany(mappedBy = "fee")
-    private List<LedgerDetail> ledgerDetails;
-
-    @OneToOne(mappedBy = "fee", cascade = CascadeType.ALL)
-    private Debit debit;
-
-    @Basic
-    @Temporal(TemporalType.DATE)
-    @Column(name = "fee_date")
+    @JsonSerialize(using = CustomDateSerializer.class)
     public Date getFeeDate() {
         return feeDate;
     }
 
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     public void setFeeDate(Date feeDate) {
         this.feeDate = feeDate;
     }
 
-    @Basic
-    @Column(name = "description")
     public String getDescription() {
         return description;
     }
@@ -57,8 +55,6 @@ public class Fee extends IncrementIDBaseEntity {
         this.description = description;
     }
 
-    @Basic
-    @Column(name = "document_number")
     public String getDocumentNumber() {
         return documentNumber;
     }
@@ -67,19 +63,16 @@ public class Fee extends IncrementIDBaseEntity {
         this.documentNumber = documentNumber;
     }
 
-    @Basic
-    @Temporal(TemporalType.DATE)
-    @Column(name = "document_date")
+    @JsonSerialize(using = CustomDateSerializer.class)
     public Date getDocumentDate() {
         return documentDate;
     }
 
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     public void setDocumentDate(Date documentDate) {
         this.documentDate = documentDate;
     }
 
-    @Basic
-    @Column(name = "amount", precision = 12, scale = 2)
     public Double getAmount() {
         return amount;
     }
@@ -88,8 +81,6 @@ public class Fee extends IncrementIDBaseEntity {
         this.amount = amount;
     }
 
-    @Basic
-    @Column(name = "tax", precision = 12, scale = 2)
     public Double getTax() {
         return tax;
     }
@@ -98,8 +89,6 @@ public class Fee extends IncrementIDBaseEntity {
         this.tax = tax;
     }
 
-    @Basic
-    @Column(name = "tax_rate")
     public Float getTaxRate() {
         return taxRate;
     }
@@ -108,8 +97,6 @@ public class Fee extends IncrementIDBaseEntity {
         this.taxRate = taxRate;
     }
 
-    @Basic
-    @Column(name = "total", precision = 12, scale = 2)
     public Double getTotal() {
         return total;
     }
@@ -118,30 +105,26 @@ public class Fee extends IncrementIDBaseEntity {
         this.total = total;
     }
 
-    @Basic
-    @Temporal(TemporalType.DATE)
-    @Column(name = "actived")
+    @JsonSerialize(using = CustomDateSerializer.class)
     public Date getActived() {
         return actived;
     }
 
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     public void setActived(Date actived) {
         this.actived = actived;
     }
 
-    @Basic
-    @Temporal(TemporalType.DATE)
-    @Column(name = "expired")
+    @JsonSerialize(using = CustomDateSerializer.class)
     public Date getExpired() {
         return expired;
     }
 
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     public void setExpired(Date expired) {
         this.expired = expired;
     }
 
-    @Basic
-    @Column(name = "divided")
     public Integer getDivided() {
         return divided;
     }
@@ -150,43 +133,43 @@ public class Fee extends IncrementIDBaseEntity {
         this.divided = divided;
     }
 
-    public Customer getCustomer() {
+    public CustomerDto getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    public void setCustomer(CustomerDto customer) {
         this.customer = customer;
     }
 
-    public Set<Vehicle> getVehicles() {
+    public List<VehicleDto> getVehicles() {
         return vehicles;
     }
 
-    public void setVehicles(Set<Vehicle> vehicles) {
+    public void setVehicles(List<VehicleDto> vehicles) {
         this.vehicles = vehicles;
     }
 
-    public Set<Romooc> getRomoocs() {
+    public List<RomoocDto> getRomoocs() {
         return romoocs;
     }
 
-    public void setRomoocs(Set<Romooc> romoocs) {
+    public void setRomoocs(List<RomoocDto> romoocs) {
         this.romoocs = romoocs;
     }
 
-    public List<LedgerDetail> getLedgerDetails() {
+    public List<LedgerDetailDto> getLedgerDetails() {
         return ledgerDetails;
     }
 
-    public void setLedgerDetails(List<LedgerDetail> ledgerDetails) {
+    public void setLedgerDetails(List<LedgerDetailDto> ledgerDetails) {
         this.ledgerDetails = ledgerDetails;
     }
 
-    public Debit getDebit() {
+    public DebitDto getDebit() {
         return debit;
     }
 
-    public void setDebit(Debit debit) {
+    public void setDebit(DebitDto debit) {
         this.debit = debit;
     }
 
@@ -194,7 +177,7 @@ public class Fee extends IncrementIDBaseEntity {
     public boolean equals(Object o){
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Fee fee = (Fee) o;
+        FeeDto fee = (FeeDto) o;
         return (getId() == fee.getId() &&
                 Objects.equals(feeDate, fee.feeDate) &&
                 Objects.equals(description, fee.description) &&
@@ -213,4 +196,5 @@ public class Fee extends IncrementIDBaseEntity {
     public int hashCode(){
         return Objects.hash(getId(), feeDate, description, documentNumber, documentDate, amount, tax, taxRate, total, actived, expired, divided);
     }
+
 }

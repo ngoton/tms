@@ -5,7 +5,6 @@ import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.tinhoctainha.tms.api.util.CustomDateDeserializer;
 import com.tinhoctainha.tms.api.util.CustomDateSerializer;
 
-import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.List;

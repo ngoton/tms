@@ -1,61 +1,39 @@
-package com.tinhoctainha.tms.domain.model;
+package com.tinhoctainha.tms.api.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
-import org.springframework.security.core.userdetails.UserDetails;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import java.io.Serializable;
 import java.util.*;
 
-@Entity
-public class User extends IncrementIDBaseEntity implements UserDetails {
-    @NotNull
-    @Basic
-    @Column(name = "username")
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class UserDto implements Serializable {
+    private Long id;
     private String username;
-
-    @NotNull
-    @Basic
-    @Column(name = "password")
     private String password;
-
-    @Basic
-    @Column(name = "enabled")
     private Boolean enabled;
+    private StaffDto staff;
+    private List<ActionDto> actions;
+    private List<RoleDto> roles = new ArrayList<>();
+    private List<PermissionDto> permissions = new ArrayList<>();
 
-    @OneToOne
-    @JoinColumn(name = "staff_id", referencedColumnName = "id")
-    private Staff staff;
+    public Long getId() {
+        return id;
+    }
 
-    @OneToMany(mappedBy = "user")
-    private List<Action> actions;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @ManyToMany
-    @JoinTable(name = "user_has_role",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "role_id")}
-    )
-    private Set<Role> roles = new HashSet<>();
-
-    @ManyToMany
-    @JoinTable(name = "user_has_permission",
-            joinColumns = {@JoinColumn(name = "user_id")},
-            inverseJoinColumns = {@JoinColumn(name = "permission_id")}
-    )
-    private Set<Permission> permissions = new HashSet<>();
-
-    @Transient
-    @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<SimpleGrantedAuthority> authorities = new ArrayList<>();
-        for(Role userRoles : roles){
+        for(RoleDto userRoles : roles){
             authorities.add(new SimpleGrantedAuthority(userRoles.getName()));
         }
         return authorities;
     }
 
-    @Override
     public String getUsername() {
         return username;
     }
@@ -64,7 +42,6 @@ public class User extends IncrementIDBaseEntity implements UserDetails {
         this.username = username;
     }
 
-    @Override
     public String getPassword() {
         return password;
     }
@@ -77,67 +54,59 @@ public class User extends IncrementIDBaseEntity implements UserDetails {
         this.enabled = enabled;
     }
 
-    @Transient
-    @Override
     public boolean isAccountNonExpired() {
         return true;
     }
 
-    @Transient
-    @Override
     public boolean isAccountNonLocked() {
         return true;
     }
 
-    @Transient
-    @Override
     public boolean isCredentialsNonExpired() {
         return true;
     }
 
-    @Transient
-    @Override
     public boolean isEnabled() {
         return true;
     }
 
-    public Staff getStaff() {
+    public StaffDto getStaff() {
         return staff;
     }
 
-    public void setStaff(Staff staff) {
+    public void setStaff(StaffDto staff) {
         this.staff = staff;
     }
 
-    public List<Action> getActions() {
+    public List<ActionDto> getActions() {
         return actions;
     }
 
-    public void setActions(List<Action> actions) {
+    public void setActions(List<ActionDto> actions) {
         this.actions = actions;
     }
 
-    public Set<Role> getRoles() {
+    public List<RoleDto> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(List<RoleDto> roles) {
         this.roles = roles;
     }
 
-    public void addRoles(Role role){
+    public void addRoles(RoleDto role){
         this.roles.add(role);
     }
 
-    public Set<Permission> getPermissions() {
+    public List<PermissionDto> getPermissions() {
         return permissions;
     }
 
-    public void setPermissions(Set<Permission> permissions) {
+    public void setPermissions(List<PermissionDto> permissions) {
         this.permissions = permissions;
     }
 
-    public void addPermissions(Permission permission){
+    public void addPermissions(PermissionDto permission){
         this.permissions.add(permission);
     }
 
@@ -145,7 +114,7 @@ public class User extends IncrementIDBaseEntity implements UserDetails {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        User user = (User) o;
+        UserDto user = (UserDto) o;
         return (getId() == user.getId() &&
                 Objects.equals(username, user.username) &&
                 Objects.equals(password, user.password) &&
@@ -156,4 +125,5 @@ public class User extends IncrementIDBaseEntity implements UserDetails {
     public int hashCode() {
         return Objects.hash(getId(), username, password, enabled);
     }
+
 }

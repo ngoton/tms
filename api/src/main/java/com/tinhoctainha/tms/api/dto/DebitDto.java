@@ -1,51 +1,44 @@
-package com.tinhoctainha.tms.domain.model;
+package com.tinhoctainha.tms.api.dto;
 
-import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.tinhoctainha.tms.api.util.CustomDateDeserializer;
+import com.tinhoctainha.tms.api.util.CustomDateSerializer;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-@Entity
-public class Debit extends IncrementIDBaseEntity {
+public class DebitDto implements Serializable {
+    private Long id;
     private Date debitDate;
     private Double total;
     private String description;
     private Integer debitType;
+    private InvoiceDto invoice;
+    private CostDto cost;
+    private CostListDto costList;
+    private FeeDto fee;
+    private OrderDto order;
 
-    @OneToOne
-    @JoinColumn(name = "invoice_id", referencedColumnName = "id")
-    private Invoice invoice;
+    public Long getId() {
+        return id;
+    }
 
-    @OneToOne
-    @JoinColumn(name = "cost_id", referencedColumnName = "id")
-    private Cost cost;
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-    @OneToOne
-    @JoinColumn(name = "cost_list_id", referencedColumnName = "id")
-    private CostList costList;
-
-    @OneToOne
-    @JoinColumn(name = "fee_id", referencedColumnName = "id")
-    private Fee fee;
-
-    @OneToOne
-    @JoinColumn(name = "order_id", referencedColumnName = "id")
-    private Order order;
-
-    @Basic
-    @NotNull
-    @Temporal(TemporalType.DATE)
-    @Column(name = "debit_date")
+    @JsonSerialize(using = CustomDateSerializer.class)
     public Date getDebitDate() {
         return debitDate;
     }
 
+    @JsonDeserialize(using = CustomDateDeserializer.class)
     public void setDebitDate(Date debitDate) {
         this.debitDate = debitDate;
     }
 
-    @Basic
-    @Column(name = "total", precision = 14, scale = 2)
     public Double getTotal() {
         return total;
     }
@@ -54,8 +47,6 @@ public class Debit extends IncrementIDBaseEntity {
         this.total = total;
     }
 
-    @Basic
-    @Column(name = "description")
     public String getDescription() {
         return description;
     }
@@ -64,8 +55,6 @@ public class Debit extends IncrementIDBaseEntity {
         this.description = description;
     }
 
-    @Basic
-    @Column(name = "debit_type")
     public Integer getDebitType() {
         return debitType;
     }
@@ -74,43 +63,43 @@ public class Debit extends IncrementIDBaseEntity {
         this.debitType = debitType;
     }
 
-    public Invoice getInvoice() {
+    public InvoiceDto getInvoice() {
         return invoice;
     }
 
-    public void setInvoice(Invoice invoice) {
+    public void setInvoice(InvoiceDto invoice) {
         this.invoice = invoice;
     }
 
-    public Cost getCost() {
+    public CostDto getCost() {
         return cost;
     }
 
-    public void setCost(Cost cost) {
+    public void setCost(CostDto cost) {
         this.cost = cost;
     }
 
-    public CostList getCostList() {
+    public CostListDto getCostList() {
         return costList;
     }
 
-    public void setCostList(CostList costList) {
+    public void setCostList(CostListDto costList) {
         this.costList = costList;
     }
 
-    public Fee getFee() {
+    public FeeDto getFee() {
         return fee;
     }
 
-    public void setFee(Fee fee) {
+    public void setFee(FeeDto fee) {
         this.fee = fee;
     }
 
-    public Order getOrder() {
+    public OrderDto getOrder() {
         return order;
     }
 
-    public void setOrder(Order order) {
+    public void setOrder(OrderDto order) {
         this.order = order;
     }
 
@@ -118,7 +107,7 @@ public class Debit extends IncrementIDBaseEntity {
     public boolean equals(Object o){
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Debit debit = (Debit) o;
+        DebitDto debit = (DebitDto) o;
         return (getId() == debit.getId() &&
                 Objects.equals(debitDate, debit.debitDate) &&
                 Objects.equals(total, debit.total) &&
@@ -130,4 +119,5 @@ public class Debit extends IncrementIDBaseEntity {
     public int hashCode(){
         return Objects.hash(getId(), debitDate, total, description, debitType);
     }
+
 }
