@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Fragments</title>
+</head>
+<body>
+    <!-- Default Navigator -->
+
+    <ul th:fragment="nav-default">
+        <li><a th:href="@{/}">Home</a></li>
+        <li><a th:href="@{/}">Search</a></li>
+        <li><a th:href="@{/support}">Support</a></li>
+    </ul>
+
+    <!-- Admin Navigator -->
+
+    <ul th:fragment="nav-admin">
+        <li><a th:href="@{/admin}">QUẢN TRỊ</a></li>
+    </ul>
+
+
+    <div th:fragment="copyright">
+        <div class="pull-right hidden-xs">
+            <b>Version</b> 4.0
+        </div>
+        <span style="font-size:5px">Powered by <a target="_blank" style="color:#fff" href="http://www.tinhoctainha.com">Dịch vụ Tin Học Tại Nhà</a></span>
+    </div>
+</body>
+</html>

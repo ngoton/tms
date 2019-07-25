@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{layouts/admin/admin-layout :: main-fragment(
+                                                ~{::title},
+                                                ~{:: #admin-otherStaticResources},
+                                                ~{:: #admin-navbar},
+                                                ~{:: #admin-sidebar},
+                                                ~{:: #admin-breadcrumb},
+                                                ~{:: #admin-content},
+                                                ~{:: #admin-footer},
+                                                ~{:: #admin-otherStaticJs}
+                                               )}">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin page</title>
+
+    <th:block id="admin-otherStaticResources">
+
+    </th:block>
+</head>
+<body>
+<div id="admin-navbar" th:replace="~{/fragments/admin/admin-fragments :: navbar-admin}">
+    Re-use admin fragments
+</div>
+
+<div id="admin-sidebar" th:replace="~{/fragments/admin/admin-fragments :: sidebar-admin}">
+    Re-use admin fragments
+</div>
+
+<div id="admin-breadcrumb" th:replace="~{/fragments/admin/admin-fragments :: breadcrumb-admin}">
+    Re-use admin fragments
+</div>
+
+<div id="admin-content">
+    <div class="col col-md-12 text-center">
+        <h1 th:text="|${status} - ${error}|">404</h1>
+        <p th:utext="${message}">Error java.lang.NullPointerException</p>
+        <p th:utext="${exception}">Error java.lang.NullPointerException</p>
+        <a th:href="@{/admin}">Back to Home Page</a>
+    </div>
+</div>
+
+<div id="admin-footer" th:replace="~{/fragments/admin/admin-fragments :: footer-admin}">
+    Footer
+</div>
+
+<th:block id="admin-otherStaticJs">
+
+</th:block>
+</body>
+</html>

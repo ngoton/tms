@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Fragments</title>
+</head>
+<body>
+    <div th:fragment="navbar-admin">
+        <ul class="nav ace-nav">
+            <li class="grey dropdown-modal">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="ace-icon fa fa-tasks"></i>
+                    <span class="badge badge-grey">4</span>
+                </a>
+                <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                    <li class="dropdown-header">
+                        <i class="ace-icon fa fa-check"></i>
+                        4 Tasks to complete
+                    </li>
+                    <li class="dropdown-content">
+                        <ul class="dropdown-menu dropdown-navbar">
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <span class="pull-left">Software Update</span>
+                                        <span class="pull-right">65%</span>
+                                    </div>
+
+                                    <div class="progress progress-mini">
+                                        <div style="width:65%" class="progress-bar"></div>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#">
+                            See tasks with details
+                            <i class="ace-icon fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="purple dropdown-modal">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="ace-icon fa fa-bell icon-animated-bell"></i>
+                    <span class="badge badge-important">8</span>
+                </a>
+                <ul class="dropdown-menu-right dropdown-navbar navbar-pink dropdown-menu dropdown-caret dropdown-close">
+                    <li class="dropdown-header">
+                        <i class="ace-icon fa fa-exclamation-triangle"></i>
+                        8 Notifications
+                    </li>
+                    <li class="dropdown-content">
+                        <ul class="dropdown-menu dropdown-navbar navbar-pink">
+                            <li>
+                                <a href="#">
+                                    <div class="clearfix">
+                                        <span class="pull-left">
+                                            <i class="btn btn-xs no-hover btn-pink fa fa-comment"></i>
+                                            New Comments
+                                        </span>
+                                        <span class="pull-right badge badge-info">+12</span>
+                                    </div>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="dropdown-footer">
+                        <a href="#">
+                            See all notifications
+                            <i class="ace-icon fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="green dropdown-modal">
+                <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                    <i class="ace-icon fa fa-envelope icon-animated-vertical"></i>
+                    <span class="badge badge-success">5</span>
+                </a>
+                <ul class="dropdown-menu-right dropdown-navbar dropdown-menu dropdown-caret dropdown-close">
+                    <li class="dropdown-header">
+                        <i class="ace-icon fa fa-envelope-o"></i>
+                        5 Messages
+                    </li>
+                    <li class="dropdown-content">
+                        <ul class="dropdown-menu dropdown-navbar">
+                            <li>
+                                <a href="#" class="clearfix">
+                                    <img  class="msg-photo" alt="Alex's Avatar" />
+                                    <span class="msg-body">
+                                      <span class="msg-title">
+                                        <span class="blue">Alex:</span>
+                                        Ciao sociis natoque penatibus et auctor ...
+                                      </span>
+
+                                      <span class="msg-time">
+                                        <i class="ace-icon fa fa-clock-o"></i>
+                                        <span>a moment ago</span>
+                                      </span>
+                                    </span>
+                                </a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-footer">
+                        <a href="inbox.html">
+                            See all messages
+                            <i class="ace-icon fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li sec:authorize="isAuthenticated()" class="light-blue dropdown-modal">
+                <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                    <span sec:authentication="name" class="user-info">
+                        <small>Welcome,</small>
+                        <span sec:authentication="principal.authorities"></span>
+                    </span>
+
+                    <i class="ace-icon fa fa-caret-down"></i>
+                </a>
+
+                <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                    <li>
+                        <a th:href="@{/user/info}">
+                            <i class="ace-icon fa fa-cog"></i>
+                            Cài đặt
+                        </a>
+                    </li>
+
+                    <li class="divider"></li>
+
+                    <li>
+                        <a th:href="@{/logout}">
+                            <i class="ace-icon fa fa-power-off"></i>
+                            Logout
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div th:fragment="sidebar-admin">
+        <script type="text/javascript">
+            try{ace.settings.loadState('sidebar')}catch(e){}
+        </script>
+
+        <ul class="nav nav-list">
+            <li class="">
+                <a data="admin" data-role="admin" th:href="@{/admin}">
+                    <i class="menu-icon fa fa-tachometer"></i>
+                    <span class="menu-text"> Dashboard </span>
+                </a>
+                <b class="arrow"></b>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-pie-chart"></i>
+                    <span class="menu-text">Báo cáo</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Phiếu vận chuyển
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Tổng hợp sản lượng
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảng kê sản lượng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sản lượng khách hàng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Chi phí xe
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sửa chữa bảo dưỡng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phí sử dụng đường bộ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phí kiểm định
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảo hiểm
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Báo cáo dầu
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Hoa hồng
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Tạm ứng
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Chi phí hành chính
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Quá trình hoạt động
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-caret-right"></i>
+                            Kết quả kinh doanh
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-dollar"></i>
+                    <span class="menu-text">Kế toán</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-money"></i>
+                            Quỹ
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phiếu thu
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phiếu chi
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Chuyển tiền nội bộ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sổ quỹ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-bank"></i>
+                            Tiền gửi
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thu tiền
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thanh toán
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sổ tiền gửi
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tài khoản ngân hàng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-truck"></i>
+                            Lô hàng
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Xuất hóa đơn
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Doanh thu
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="#" href="#" class="dropdown-toggle">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Chi phí
+                                    <b class="arrow fa fa-angle-down"></b>
+                                </a>
+                                <b class="arrow"></b>
+                                <ul class="submenu">
+                                    <li class="">
+                                        <a data="#" href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Tổng hợp
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                    <li class="">
+                                        <a data="#" href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Không hóa đơn
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                    <li class="">
+                                        <a data="#" href="#">
+                                            <i class="menu-icon fa fa-caret-right"></i>
+                                            Phí cầu đường
+                                        </a>
+                                        <b class="arrow"></b>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="">
+                                <a data="costlist" data-role="costlist" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Danh mục chi phí
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-user"></i>
+                            Công nợ
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phải thu
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phải trả
+                                </a>
+
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Chi hộ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-database"></i>
+                            Kho
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Chi tiết hàng hóa
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tổng hợp tồn kho
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-file-text-o"></i>
+                            Tổng hợp
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Danh mục tài khoản
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phiếu kế toán
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Nhật ký chung
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Sổ chi tiết
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Kết chuyển lãi lỗ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-calculator"></i>
+                            Báo cáo thuế
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảng kê HĐ mua vào
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảng kê HĐ bán ra
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tờ khai thuế GTGT
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-line-chart"></i>
+                            Báo cáo tài chính
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảng cân đối phát sinh
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảng cân đối kế toán
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Báo cáo KQHĐKD
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-clipboard"></i>
+                    <span class="menu-text">Kinh doanh</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="booking" data-role="booking" th:href="@{/booking}">
+                            <i class="menu-icon fa fa-book"></i>
+                            Booking
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-file-text-o"></i>
+                            Bảng kê vận chuyển
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-file-text-o"></i>
+                            Bảng kê chi hộ
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-money"></i>
+                            Hoa hồng
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-truck"></i>
+                    <span class="menu-text">Điều độ</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-cubes"></i>
+                            Lô hàng
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="newbooking" data-role="newbooking" th:href="@{/newbooking}">
+                                    <i class="menu-icon fa fa-clock-o orange"></i>
+                                    Đang chờ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="shipmenttemp" data-role="shipmenttemp" th:href="@{/shipmenttemp}">
+                                    <i class="menu-icon fa fa-check green"></i>
+                                    Đã nhận
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="coordinate" data-role="coordinate" th:href="@{/coordinate}">
+                            <i class="menu-icon fa fa-road"></i>
+                            Điều xe
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="shipment" data-role="shipment" th:href="@{/shipment}">
+                            <i class="menu-icon fa fa-bus"></i>
+                            Phiếu vận chuyển
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-file-text-o"></i>
+                            Phiếu cầu đường
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="#" data-role="#" href="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tổng hợp
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="#" data-role="#" href="">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bảng kê
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" >
+                            <i class="menu-icon fa fa-arrow-circle-up"></i>
+                            Nâng hạ cont
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="driver" data-role="driver" th:href="@{/driver}">
+                            <i class="menu-icon fa fa-exchange"></i>
+                            Bàn giao xe
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="vehiclework" data-role="vehiclework" th:href="@{/vehiclework}">
+                            <i class="menu-icon fa fa-pause-circle-o"></i>
+                            Tạm dừng xe
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-eraser"></i>
+                            Mooc
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="exchangeromooc" data-role="exchangeromooc" th:href="@{/exchangeromooc}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Thay mooc
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="vehicleromooc" data-role="vehicleromooc" th:href="@{/vehicleromooc}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Quản lý mooc
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-gear"></i>
+                    <span class="menu-text">Vật tư</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="backup" data-role="backup" th:href="@{/admin}">
+                            <i class="menu-icon fa fa-tachometer"></i>
+                            Bảng theo dõi
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-database"></i>
+                            Kho
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="importstock" data-role="importstock" th:href="@{/importstock}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Nhập kho
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="exportstock" data-role="exportstock" th:href="@{/exportstock}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Xuất kho
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="update" data-role="update" th:href="@{/admin}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tồn kho
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-calendar"></i>
+                            Kiểm định, bảo hiểm
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="roadcost" data-role="roadcost" th:href="@{/roadcost}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phí sử dụng đường bộ
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="checkingcost" data-role="checkingcost" th:href="@{/checkingcost}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phí kiểm định
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="insurancecost" data-role="insurancecost" th:href="@{/insurancecost}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phí bảo hiểm
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-wrench"></i>
+                            Thay thế phụ tùng
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="sparevehicle" data-role="sparevehicle" th:href="@{/sparevehicle}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Tháo lắp phụ tùng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="sparevehiclepass" data-role="sparevehiclepass" th:href="@{/sparevehiclepass}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Chuyển đổi phụ tùng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="sparedrap" data-role="sparedrap" th:href="@{/sparedrap}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Phụ tùng thay ra
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="sparevehiclelist" data-role="sparevehiclelist" th:href="@{/sparevehiclelist}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Quản lý phụ tùng
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="repair" data-role="repair" th:href="@{/repair}">
+                            <i class="menu-icon fa fa-calendar-check-o"></i>
+                            Sửa chữa bảo dưỡng
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="gas" data-role="gas" th:href="@{/gas}">
+                            <i class="menu-icon fa fa-tint"></i>
+                            Đổ dầu
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="house" data-role="house" th:href="@{/house}">
+                            <i class="menu-icon fa fa-home"></i>
+                            Danh sách kho vật tư
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="sparepart" data-role="sparepart" th:href="@{/sparepart}">
+                            <i class="menu-icon fa fa-dropbox"></i>
+                            Danh sách vật tư
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="sparepartcode" data-role="sparepartcode" th:href="@{/sparepartcode}">
+                            <i class="menu-icon fa fa-dropbox"></i>
+                            Quản lý mã vật tư
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-users"></i>
+                    <span class="menu-text">Nhân sự</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-table"></i>
+                            Bảng lương
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="salary/driver" data-role="salary" th:href="@{/salary/driver}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Lương tài xế
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="salary/staff" data-role="salary" th:href="@{/salary/staff}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Lương nhân viên
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="oilsalary" data-role="oilsalary" th:href="@{/oilsalary}">
+                            <i class="menu-icon fa fa-tint"></i>
+                            Bảng tính dầu
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="staff" data-role="staff" th:href="@{/staff}">
+                            <i class="menu-icon fa fa-user"></i>
+                            Danh sách nhân viên
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="department" data-role="department" th:href="@{/department}">
+                            <i class="menu-icon fa fa-archive"></i>
+                            Danh sách phòng ban
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="position" data-role="position" th:href="@{/position}">
+                            <i class="menu-icon fa fa-user-secret"></i>
+                            Danh sách chức vụ
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-th-list"></i>
+                    <span class="menu-text">Danh mục</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="customer" data-role="customer" th:href="@{/customer}">
+                            <i class="menu-icon fa fa-user"></i>
+                            Khách hàng - Đối tác
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="vehicle" data-role="vehicle" th:href="@{/vehicle}">
+                            <i class="menu-icon fa fa-car"></i>
+                            Danh sách xe
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="romooc" data-role="romooc" th:href="@{/romooc}">
+                            <i class="menu-icon fa fa-eraser"></i>
+                            Danh sách mooc
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="place" data-role="place" th:href="@{/place}">
+                            <i class="menu-icon fa fa-home"></i>
+                            Danh sách kho hàng
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="route" data-role="route" th:href="@{/route}">
+                            <i class="menu-icon fa fa-map-marker"></i>
+                            Danh sách địa điểm
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="toll" data-role="toll" th:href="@{/toll}">
+                            <i class="menu-icon fa fa-bus"></i>
+                            Trạm thu phí
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="shipping" data-role="shipping" th:href="@{/shipping}">
+                            <i class="menu-icon fa fa-ship"></i>
+                            Hãng tàu
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="port" data-role="port" th:href="@{/port}">
+                            <i class="menu-icon fa fa-anchor"></i>
+                            Cảng
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="lift" data-role="lift" th:href="@{/lif}">
+                            <i class="menu-icon fa fa-arrow-circle-up"></i>
+                            Phí nâng hạ
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="#" href="#" class="dropdown-toggle">
+                            <i class="menu-icon fa fa-flask"></i>
+                            Định mức
+                            <b class="arrow fa fa-angle-down"></b>
+                        </a>
+                        <b class="arrow"></b>
+                        <ul class="submenu">
+                            <li class="">
+                                <a data="oil" data-role="oil" th:href="@{/oil}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Định mức dầu
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="road" data-role="road" th:href="@{/road}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Định mức tuyến đường
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                            <li class="">
+                                <a data="warehouse" data-role="warehouse" th:href="@{/warehouse}">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                    Bồi dưỡng kho
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="">
+                        <a data="bonus" data-role="bonus" th:href="@{/bonus}">
+                            <i class="menu-icon fa fa-tint"></i>
+                            Thưởng phạt dầu
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="repaircode" data-role="repaircode" th:href="@{/repaircode}">
+                            <i class="menu-icon fa fa-wrench"></i>
+                            Danh mục sửa chữa
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="unit" data-role="unit" th:href="@{/unit}">
+                            <i class="menu-icon fa fa-info-circle"></i>
+                            Đơn vị tính
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="#" href="#" class="dropdown-toggle">
+                    <i class="menu-icon fa fa-cogs"></i>
+                    <span class="menu-text">Hệ thống</span>
+                    <b class="arrow fa fa-angle-down"></b>
+                </a>
+                <b class="arrow"></b>
+                <ul class="submenu">
+                    <li class="">
+                        <a data="info" data-role="info" th:href="@{/info}">
+                            <i class="menu-icon fa fa-info-circle"></i>
+                            Thông tin doanh nghiệp
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="user" data-role="user" th:href="@{/user}">
+                            <i class="menu-icon fa fa-user"></i>
+                            Tài khoản
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="permission" data-role="permission" th:href="@{/permission}">
+                            <i class="menu-icon fa fa-lock"></i>
+                            Phân quyền
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="adminbackup" data-role="adminbackup" th:href="@{/adminbackup}">
+                            <i class="menu-icon fa fa-refresh"></i>
+                            Sao lưu & Phục hồi
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                    <li class="">
+                        <a data="adminupdate" data-role="adminupdate" th:href="@{/adminupdate}">
+                            <i class="menu-icon fa fa-hdd-o"></i>
+                            Cập nhật phần mềm
+                        </a>
+                        <b class="arrow"></b>
+                    </li>
+                </ul>
+            </li>
+            <li class="">
+                <a data="support" data-role="support" th:href="@{/support}">
+                    <i class="menu-icon fa fa-question-circle"></i>
+                    <span class="menu-text"> Hỗ trợ </span>
+                </a>
+                <b class="arrow"></b>
+            </li>
+        </ul><!-- /.nav-list -->
+
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state" data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+    </div>
+
+    <div th:fragment="breadcrumb-admin">
+        <ul class="breadcrumb">
+            <li>
+                <i class="ace-icon fa fa-home home-icon"></i>
+                <a href="#" onclick="javascript:window.history.back();" >Quay lại</a>
+            </li>
+        </ul><!-- /.breadcrumb -->
+    </div>
+
+    <div th:fragment="footer-admin">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <span class="bigger-120">
+                  &copy;
+                    <span th:text="${#calendars.format(#calendars.createNow(), 'yyyy')}"></span>
+                    <span class="blue bolder">TMS</span>
+                  v4.0
+                </span>
+
+                &nbsp; &nbsp;
+                <span class="action-buttons">
+                  <a href="http://www.tinhoctainha.com" target="_blank">
+                    <i class="ace-icon fa fa-globe light-blue bigger-150"></i>
+                  </a>
+                  <a href="https://www.facebook.com/tinhoctainha" target="_blank">
+                    <i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i>
+                  </a>
+                  <a href="https://twitter.com/tinhoctainha" target="_blank">
+                    <i class="ace-icon fa fa-twitter-square light-blue bigger-150"></i>
+                  </a>
+                </span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

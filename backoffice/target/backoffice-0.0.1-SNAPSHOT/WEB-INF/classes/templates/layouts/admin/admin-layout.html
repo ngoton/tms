@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi" xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (title, otherStaticResources, navbar, sidebar, breadcrumb, content, footer, otherStaticJs)">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="UTF-8">
+    <title th:replace="${title}">Dashboard</title>
+    <meta name="description" content="Transportation Management System - TMS" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <link th:href="@{/images/logo.png}" href="../../../static/images/logo.png" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}" href="../../../static/css/bootstrap.min.css" />
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}" href="../../../static/css/font-awesome.min.css" />
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <!-- page specific plugin styles -->
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.min.css}" href="../../../static/css/jquery-ui.min.css" />
+    <!-- text fonts -->
+    <link rel="stylesheet" th:href="@{/css/fonts.googleapis.com.css}" href="../../../static/css/fonts.googleapis.com.css" />
+    <!-- ace styles -->
+    <link rel="stylesheet" th:href="@{/css/ace.min.css}" href="../../../static/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" th:href="@{/css/ace-part2.min.css}" href="../../../static/css/ace-part2.min.css" class="ace-main-stylesheet" />
+    <![endif]-->
+    <link rel="stylesheet" th:href="@{/css/ace-skins.min.css}" href="../../../static/css/ace-skins.min.css" />
+    <link rel="stylesheet" th:href="@{/css/ace-rtl.min.css}" href="../../../static/css/ace-rtl.min.css" />
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" th:href="@{/css/ace-ie.min.css}" href="../../../static/css/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+    <script th:src="@{/js/ace-extra.min.js}" src="../../../static/js/ace-extra.min.js"></script>
+    <script th:src="@{/js/jquery-2.1.4.min.js}" src="../../../static/js/jquery-2.1.4.min.js"></script>
+    <script th:src="@{/js/jquery.validate.min.js}" src="../../../static/js/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" th:href="@{/css/bootstrap-multiselect.min.css}" href="../../../static/css/bootstrap-multiselect.min.css" />
+    <link rel="stylesheet" th:href="@{/css/select2.min.css}" href="../../../static/css/select2.min.css" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap-editable.min.css}" href="../../../static/css/bootstrap-editable.min.css" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap-datepicker3.min.css}" href="../../../static/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap-datetimepicker.min.css}" href="../../../static/css/bootstrap-datetimepicker.min.css" />
+    <link rel="stylesheet" th:href="@{/css/bootstrap-timepicker.min.css}" href="../../../static/css/bootstrap-timepicker.min.css" />
+    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}" href="../../../static/css/jquery-ui.css" />
+
+    <script th:src="@{/js/head.js}" src="../../../static/js/head.js"></script>
+</head>
+<body class="no-skin">
+    <div id="navbar" class="navbar navbar-default ace-save-state">
+        <div class="navbar-container ace-save-state" id="navbar-container">
+            <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+                <span class="sr-only">Toggle sidebar</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <div class="navbar-header pull-left">
+                <a th:href="@{/}" class="navbar-brand">
+                    <small>
+                        <img width="25" height="25" th:src="@{/images/logo.png}" src="../../../static/images/logo.png" alt="Avatar" />
+                        TMS
+                    </small>
+                </a>
+            </div>
+            <div class="navbar-buttons navbar-header pull-right" role="navigation" th:insert="${navbar} ?: ~{}">
+            </div>
+        </div>
+    </div>
+    <div class="main-container ace-save-state" id="main-container">
+        <script type="text/javascript">
+            try{ace.settings.loadState('main-container')}catch(e){}
+        </script>
+        <div id="sidebar" class="sidebar responsive ace-save-state" th:insert="${sidebar} ?: ~{}">
+        </div>
+        <div class="main-content">
+            <div class="main-content-inner">
+                <div class="ace-settings-container" id="ace-settings-container">
+                    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                        <i class="ace-icon fa fa-cog bigger-130"></i>
+                    </div>
+
+                    <div class="ace-settings-box clearfix" id="ace-settings-box">
+                        <div class="pull-left width-50">
+                            <div class="ace-settings-item">
+                                <div class="pull-left">
+                                    <select id="skin-colorpicker" class="hide">
+                                        <option data-skin="no-skin" value="#438EB9">#438EB9</option>
+                                        <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                                        <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                                        <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                                    </select>
+                                </div>
+                                <span>&nbsp; Chọn chủ đề</span>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-navbar" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-navbar"> Cố định Menu trên</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-sidebar" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-sidebar"> Cố định Menu dọc</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-breadcrumbs" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-breadcrumbs"> Cố định Thanh điều hướng</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-rtl"> Xoay trái qua phải (rtl)</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2 ace-save-state" id="ace-settings-add-container" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-add-container">
+                                    Thu nhỏ màn hình
+                                    <b>.container</b>
+                                </label>
+                            </div>
+                        </div><!-- /.pull-left -->
+
+                        <div class="pull-left width-50">
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-hover"> Hiển thị Menu con</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-compact"> Chuyển đổi Menu</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight" autocomplete="off" />
+                                <label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
+                            </div>
+                        </div><!-- /.pull-left -->
+                    </div><!-- /.ace-settings-box -->
+                </div>
+                <div class="breadcrumbs ace-save-state" id="breadcrumbs" th:insert="${breadcrumb} ?: ~{}">
+                </div>
+                <div class="page-content">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="widget-box widget-color-grey" id="widget-box">
+                                <div class="widget-header text-uppercase widget-header-small ">
+                                    <h5 class="widget-title bigger lighter">
+                                        <i class="ace-icon fa fa-table"></i>
+                                        <span th:replace="${title}"></span>
+                                    </h5>
+                                    <div class="widget-toolbar">
+                                        <a href="#" data-action="reload" class="green">
+                                            <i class="ace-icon fa fa-refresh"></i>
+                                        </a>
+                                        <a href="#" data-action="fullscreen" class="orange2">
+                                            <i class="ace-icon fa fa-expand"></i>
+                                        </a>
+                                        <a href="#" data-action="collapse">
+                                            <i class="ace-icon fa fa-chevron-up"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="widget-body">
+                                    <div class="widget-main no-padding" th:insert="${content} ?: ~{}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!-- /.page-content -->
+            </div>
+        </div><!-- /.main-content -->
+
+        <div class="footer" th:insert="${footer} ?: ~{}">
+        </div>
+        <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+            <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+        </a>
+    </div><!-- /.main-container -->
+    <div id="ajax_loader" style="position: absolute; left: calc(50% - 80px); top: calc(50vh - 80px); z-index:999999;">
+        <img th:src="@{/images/loader-car.gif}" src="../../../static/images/loader-car.gif">
+    </div>
+    <div id="dialog-message" class="hide"></div><!-- #dialog-message -->
+    <div id="dialog-message-other" class="hide"></div><!-- #dialog-message -->
+    <!-- basic scripts -->
+    <script type="text/javascript">
+        if('ontouchstart' in document.documentElement) document.write("<script th:src=\"@{/js/jquery.mobile.custom.min.js}\" src='../../../static/js/jquery.mobile.custom.min.js'>"+"<"+"/script>");
+    </script>
+    <script th:src="@{/js/bootstrap.min.js}" src="../../../static/js/bootstrap.min.js"></script>
+    <script th:src="@{/js/jquery-ui.custom.min.js}" src="../../../static/js/jquery-ui.custom.min.js"></script>
+    <script th:src="@{/js/jquery.ui.touch-punch.min.js}" src="../../../static/js/jquery.ui.touch-punch.min.js"></script>
+
+    <script th:src="@{/js/bootstrap-wysiwyg.min.js}" src="../../../static/js/bootstrap-wysiwyg.min.js"></script>
+    <script th:src="@{/js/bootstrap-multiselect.min.js}" src="../../../static/js/bootstrap-multiselect.min.js"></script>
+    <script th:src="@{/js/select2.min.js}" src="../../../static/js/select2.min.js"></script>
+    <script th:src="@{/js/spinbox.min.js}" src="../../../static/js/spinbox.min.js"></script>
+    <script th:src="@{/js/bootstrap-editable.min.js}" src="../../../static/js/bootstrap-editable.min.js"></script>
+    <script th:src="@{/js/ace-editable.min.js}" src="../../../static/js/ace-editable.min.js"></script>
+    <script th:src="@{/js/jquery.maskedinput.min.js}" src="../../../static/js/jquery.maskedinput.min.js"></script>
+    <script th:src="@{/js/jquery.inputmask.bundle.js}" src="../../../static/js/jquery.inputmask.bundle.js"></script>
+    <script th:src="@{/js/bootstrap-tag.min.js}" src="../../../static/js/bootstrap-tag.min.js"></script>
+
+    <script th:src="@{/js/jquery.battatech.excelexport.js}" src="../../../static/js/jquery.battatech.excelexport.js"></script>
+    <script th:src="@{/js/export/libs/FileSaver/FileSaver.min.js}" src="../../../static/js/export/libs/FileSaver/FileSaver.min.js"></script>
+    <script th:src="@{/js/export/libs/js-xlsx/xlsx.core.min.js}" src="../../../static/js/export/libs/js-xlsx/xlsx.core.min.js"></script>
+    <script th:src="@{/js/export/libs/jsPDF/jspdf.min.js}" src="../../../static/js/export/libs/jsPDF/jspdf.min.js"></script>
+    <script th:src="@{/js/export/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js}" src="../../../static/js/export/libs/jsPDF-AutoTable/jspdf.plugin.autotable.js"></script>
+    <script th:src="@{/js/export/libs/html2canvas/html2canvas.min.js}" src="../../../static/js/export/libs/html2canvas/html2canvas.min.js"></script>
+    <script th:src="@{/js/export/tableExport.min.js}" src="../../../static/js/export/tableExport.min.js"></script>
+
+    <script th:src="@{/js/jquery.dialogextend.js}" src="../../../static/js/jquery.dialogextend.js"></script>
+
+    <!-- ace scripts -->
+    <script th:src="@{/js/ace-elements.min.js}" src="../../../static/js/ace-elements.min.js"></script>
+    <script th:src="@{/js/ace.min.js}" src="../../../static/js/ace.min.js"></script>
+
+    <script type="text/javascript">
+        $('a[ data-original-title]').tooltip();
+    </script>
+
+
+    <script th:src="@{/js/jquery-ui.min.js}" src="../../../static/js/jquery-ui.min.js"></script>
+    <script th:src="@{/js/bootstrap-datepicker.min.js}" src="../../../static/js/bootstrap-datepicker.min.js"></script>
+    <script th:src="@{/js/moment.min.js}" src="../../../static/js/moment.min.js"></script>
+    <script th:src="@{/js/bootstrap-timepicker.min.js}" src="../../../static/js/bootstrap-timepicker.min.js"></script>
+    <script th:src="@{/js/bootstrap-datetimepicker.min.js}" src="../../../static/js/bootstrap-datetimepicker.min.js"></script>
+
+    <script type="text/javascript">
+        //override dialog's title function to allow for HTML titles
+        $.widget("ui.dialog", $.extend({}, $.ui.dialog.prototype, {
+            _title: function(title) {
+                var $title = this.options.title || '&nbsp;'
+                if( ("title_html" in this.options) && this.options.title_html == true )
+                    title.html($title);
+                else title.text($title);
+            }
+        }));
+        // jqueryui defaults
+        $.extend($.ui.dialog.prototype.options, {
+            create: function() {
+                var $this = $(this);
+
+                // focus first button and bind enter to it
+                $this.parent().find('.ui-dialog-buttonpane button:first').focus();
+                $this.keypress(function(e) {
+                    if( e.keyCode == $.ui.keyCode.ENTER ) {
+                        $this.parent().find('.ui-dialog-buttonpane button:first').click();
+                        return false;
+                    }
+                });
+            }
+        });
+
+        //editables on first profile page
+        $.fn.editable.defaults.mode = 'inline';
+        $.fn.editableform.loading = "<div class='editableform-loading'><i class='ace-icon fa fa-spinner fa-spin fa-2x light-blue'></i></div>";
+        $.fn.editableform.buttons = '<button type="submit" class="btn btn-info editable-submit"><i class="ace-icon fa fa-check"></i></button>'+
+            '<button type="button" class="btn editable-cancel"><i class="ace-icon fa fa-times"></i></button>';
+
+        $(window).load(function() {
+            $("#ajax_loader").fadeOut(200);
+        });
+    </script>
+
+    <th:block th:replace="${otherStaticJs} ?: ~{}"></th:block>
+</body>
+</html>
